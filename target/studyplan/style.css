@@ -1,0 +1,243 @@
+body {
+  background-color: white;
+}
+
+.container-fluid{
+
+	height:1350px;
+
+}
+
+#index{
+	background: rgb(31, 34, 41);
+	color: white;
+	height: 100%;
+	max-width: 18%;
+}
+
+.text-dark{
+	font-size: 18px;
+}
+
+.link_title{
+	min-height:60px;
+	max-width: 100%;
+	display: inline-block;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 30px;
+	padding-left: 25px;
+	padding-top: 15px;
+
+}
+
+#image{
+	height:320px;
+}
+.thumbnail{
+	position: relative;
+}
+.DataScience{
+	position: absolute;
+	top: 70%;
+	left: 0;
+	width: 100%;
+	color: white;
+}
+.text-danger{
+	margin-left: 1000px;
+	border: 1px solid rgb(206, 206, 208);
+}
+.box{
+	position: absolute;
+	color: black;
+	height: 910px;
+	max-width: 85%;
+	border: 2px solid grey;
+}
+
+.main {
+	margin-left: 160px; /* Same as the width of the sidenav */
+	padding: 0px 10px;
+}
+
+.panel {
+	padding: 0 18px;
+	display: none;
+	background-color: white;
+	overflow: hidden;
+}
+.col-border{
+	padding-top: 10px;
+	position: absolute;
+	background-color: rgb(224, 224, 224);
+	color: black;
+	height: 790px;
+	max-width: 20%;
+	border: 1px solid grey;
+}
+
+.preview{
+	color: black;
+	height: 600px;
+	max-width: 97%;
+	border: 2px solid grey;
+	border-radius: 5px;
+}
+
+#form{
+	height: 490px;
+	max-width: 95%;
+	margin-left: 3%;
+}
+table{
+	width: 100%;
+}
+th, td{
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid dimgrey;
+}
+
+th{
+	border-right: 1px solid dimgrey;
+}
+.first{
+	border-top: 1px solid dimgrey;
+}
+.total{
+	background-color: #cbcaca;
+}
+.imge{
+	align: center;
+
+}
+.accept, .reject{
+	margin-top: 20px;
+	cursor:pointer;
+	height: 30px;
+	width: 80px;
+	border-radius: 20px;
+	text-align: center;
+	padding-top: 4px ;
+	font-family: "Arial", "Helvetica", sans-serif;
+}
+
+h5{
+	text-align: left;
+	padding-top: 3px;
+	color: #555555;
+}
+.comments{
+	overflow: visible;
+	color: black;
+	height: 148px;
+	max-width: 97%;
+	border: 2px solid grey;
+	border-radius: 5px;
+
+}
+
+.dropdown{
+	margin-left: 587px;
+}
+
+textarea{
+	border-radius: 5px;
+	border: 1px solid grey;
+	margin-left: 15px;
+	padding-left: 10px;
+}
+
+input{
+	margin-left: 530px;
+	margin-top: 8px;
+	cursor:pointer;
+	height: 30px;
+	width: 170px;
+	text-align: center;
+	font-family: "Arial", "Helvetica", sans-serif;
+}
+
+.dropdownMenuLink{
+	color: white;
+	cursor: pointer;
+	border: 1px grey;
+	border-radius: 3px;
+}
+
+.dbutton:hover, .dbutton:focus{
+	background-color: #575a5c;
+}
+
+
+
+.dropdown-content{
+	position: absolute;
+	background-color: white;
+	min-width: 160px;
+	z-index: 1;
+}
+
+.dropdown-content a{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	margin-left:0px;
+}
+
+.dropdown-content a:hover{
+	background-color: rgba(0,0,0,0.2);
+}
+
+.show{
+	display:block;
+}
+.navbar.fixed-left{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:1030
+}
+
+.navbar.fixed-left{
+	bottom:0;
+	width:232px;
+	flex-flow:column nowrap;
+	align-items:flex-start
+}
+
+.navbar.fixed-left .navbar-collapse{
+	flex-grow:0;
+	flex-direction:column;
+	width:100%
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav{
+	flex-direction:column;
+	width:100%
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav .nav-item{
+	width:100%
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav .nav-item {
+	top:0
+}
+
+.navbar.fixed-left .navbar-nav .nav-item {
+	border-top:.3em solid transparent;
+	border-left:.3em solid;
+	border-bottom:.3em solid transparent;
+	border-right:none;
+	vertical-align:baseline
+}
+
+.navbar.fixed-left .navbar-nav .nav-item {
+	left:100%
+}
+.row{
+	text-align: center;
+}

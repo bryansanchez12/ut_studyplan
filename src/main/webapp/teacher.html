@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Master Program</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div id="index" class="col-3 px-1 position-fixed">
+
+            <div class="mt-3 pl-4">
+                <a href="https://www.utwente.nl/en/" class="text-white h5 text-decoration-none">UNIVERSITY</a><br>
+                <a href="https://www.utwente.nl/en/" class="text-white h5 text-decoration-none">OF TWENTE</a>
+            </div>
+
+
+            <div class="list-group list-group-flush mt-5">
+
+
+                <button id="submitted_forms"type= "button"  onclick="changePath(this)" class="list-group-item list-group-item-action text-white bg-secondary text-decoration-none">Submitted forms</button>
+
+                <br>
+
+                <button id = "approved_forms" type= "button"  onclick="changePath(this)" class="list-group-item list-group-item-action bg-secondary text-white text-decoration-none">Approved forms</button>
+
+                <br>
+
+                <button id = "archive" type= "button"  onclick="changePath(this)" class="list-group-item list-group-item-action bg-secondary text-white text-decoration-none">Archive</button>
+
+                <br>
+
+                <button class="list-group-item list-group-item-action bg-secondary text-white text-decoration-none">Form editor</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-10 offset-2">
+
+        <div class="row">
+
+            <div id="faculty" class="col-12">
+
+                <a class="text-dark link_title text-decoration-none" href="https://www.utwente.nl/en/eemcs/">EEMCS FACULTY</a>
+
+                <a href="https://www.utwente.nl/en/csc/" class= "text-dark text-decoration-none"> | Computer Science (MSc) programme</a>
+
+
+            </div>
+
+            <div id="image" class="col-12">
+                <div class="thumbnail text-center">
+                    <img src="Pic_06.jpg" width="1160" height="375" alt="">
+                    <div class="DataScience">
+                        <h1><strong>DTS & TECHNOLOGY MASTER</strong></h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+
+                <a href="#" class="btn btn-light text-danger" role="button">Log out</a>
+
+            </div>
+
+            <div class="col-12">
+                <p> </p>
+            </div>
+
+            <div class="col-12 h-100">
+
+                <div class = "row offset-1">
+
+                    <div class="col-11 box">
+
+                        <div class="col">
+
+                            <p class="pl-3 pt-4 font-weight-light"><em>MASTER PROGRAM</em></p>
+
+                        </div>
+
+
+                        <div class="col-3 col-border overflow-auto">
+                            <div class = "accordion" id="accordionMandatory">
+                                <! --- students who has a form --->
+                                <div class = "card">
+                                    <div class="card-header" id="headingMandatory">
+                                        <h6 class="mb-0">
+                                            <div class="text-left" id ="studentsForms">
+                                                <p>No forms founds so far</p>
+                                            </div>
+                                        </h6>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row offset-3">
+
+                            <div class="col-12 preview">
+
+                                <p class="pl-3 mt-3 text-center"> </p>
+
+                                <div class="col-12">
+                                    <p>    </p>
+                                </div>
+
+                                <div id="form" class="row overflow-auto ">
+                                    <img src="item2.png" height="250px" width="200px" alt="Select Item" class=" mx-auto mt-5 pl-4">
+                                </div>
+
+
+                                <div row class="offset-9">
+                                    <button id="Approved"class="btn btn-secondary accept" type="Accept" onclick="changeState(this)">Accept</button>
+
+                                    <button id="Rejected" class="btn btn-secondary reject" type="Reject" onclick="changeState(this)">Reject</button>
+                                </div>
+
+                            </div>
+
+                            <h5>Comments</h5>
+
+                            <div class="col comments">
+
+                                <div class="row mt-2">
+
+                                    <div class="dropdown show">
+                                        <a class="btn btn-secondary text-light dropdown-toggle" role="button" id="dropdownMenuLink"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Default
+                                        </a>
+
+                                        <div id="templateDrop" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a id="template1" class="dropdown-item" href="#default"
+                                               onclick="comment(this)">Accepted Form</a>
+                                            <a id="template2" class="dropdown-item" href="#default"
+                                               onclick="comment(this)">Rejected Form</a>
+                                            <a id="template3"class="dropdown-item" href="#default"
+                                               onclick="comment(this)">Important Rules</a>
+                                        </div>
+                                    </div>
+                                    <form id="text" name="FComment"  name="changestuatus">
+                                        <textarea id="default" rows="3" cols="80" name="comment"></textarea>
+                                        <br><br>
+                                        <input class="btn btn-secondary" id="btn_submit" name="" type="submit" onclick="validateComment(this)" value="Publish" >
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+                                <p>    </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+
+    $( document ).ready(function() {
+
+        getForms();
+    });
+
+    var studentsForms;
+    var fullForm;
+    var restServlet = "http://localhost:8080/studyplan/rest/";
+    var formStatus;
+
+    function changeState(status) {
+        var v = status.id;
+        alert("the form has been " + v +". Please, enter a comment and publish your changes");
+        formStatus = v;
+    }
+
+   function myFunction() {
+       document.getElementById("templateDrop").classList.toggle("show")
+   }
+
+   function comment(comment){
+        var template = comment.id;
+        var comments = "";
+        switch(template){
+            case "template1":
+                comments = "Dear [name], \n" +
+                    "We are delighted to inform you that after  receiving and reviewing your application form for the [program] \n" +
+                    "master program in the academic year [year], your application has been accepted. \n" +
+                    "\n" +
+                    "Kind regards, \n" +
+                    "\n" +
+                    "[Mentor name]\n";
+                break;
+            case "template2":
+                comments = "Dear [name], \n" +
+                    " We have received your application form for the [program] master program, unfortunately, after reviewing it\n" +
+                    "we have to inform you that it has been rejected.\n" +
+                    "The reasons why we took this decision can be seen below:\n" +
+                    "-[reason 1]\n" +
+                    "-[reason 2]\n" +
+                    "-[reason 3]\n" +
+                    "Remember the deadline for submission is the [date], good luck with your application.\n" +
+                    "\n"+
+                    "Kind regards, \n" +
+                    "\n" +
+                    "[Mentor name]\n";
+                break;
+            case "template3":
+                comments = "Dear [name], \n" +
+                    "I would like to remind you some important teaching and examination rules followed by our program: \n" +
+                    "-[rule 1]\n" +
+                    "-[rule 2]\n" +
+                    "-[rule 3]\n" +
+                    "we wanted to remind you of these important aspects due to [reason].\n" +
+                    "Hope you have understood them and take them into account\n" +
+                    "\n"+
+                    "Kind regards, \n" +
+                    "\n" +
+                    "[Mentor name]\n";
+                break;
+            default:
+                comments =  "Dear [name], ";
+                break;
+        }
+        //develop..
+
+        document.getElementById("default").innerHTML = comments;
+
+   }
+
+    function changePath(forms){
+        var path = "mentor/"+forms.id;
+        var txtS = "", xS;
+        var	xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                studentsForms = JSON.parse(this.responseText);
+                for( xS in studentsForms){
+                    txtS += " <button type=\"button\" id = \"" + studentsForms[xS].f_id+ "\" onclick= \"displayForm(this)\">"+
+                        "Student number: "+ studentsForms[xS].s_number+ "credits: "+parseInt(studentsForms[xS].ec)+"</button>";
+                }
+                document.getElementById("studentsForms").innerHTML = txtS;
+            }
+        };
+        xmlhttp.open("GET",restServlet + path ,true);
+        xmlhttp.send();
+    }
+
+    function getForms(){
+        var txtS = "", xS;
+        var	xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                studentsForms = JSON.parse(this.responseText);
+                for( xS in studentsForms){
+                    txtS += " <button type=\"button\" id = \"" + studentsForms[xS].f_id+ "\" onclick= \"displayForm(this)\">"+
+                        "Student number: "+ studentsForms[xS].s_number+ "credits: "+parseInt(studentsForms[xS].ec)+"</button>";
+                }
+                document.getElementById("studentsForms").innerHTML = txtS;
+            }
+        };
+        xmlhttp.open("GET",restServlet + "mentor/submitted_forms" ,true);
+        xmlhttp.send();
+    }
+
+
+    function displayForm(form){
+        var form_id = form.id;
+        var txtF = "", advance, elective,core;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200){
+                fullForm = JSON.parse(this.responseText);
+
+                txtF+= "<table><tr class=\"first\"><th>Student name:</th><td>NAME";
+                //CREATE THE TABLE
+                txtF+= "</td></tr><tr><th>Student Number:</th><td>"+fullForm.s_number +
+                        "</td></tr><tr><th>Is it your first time of application?</th><td>" + fullForm.firstTime+
+                        "</td></tr><tr><th>Brief explanation of changes</th><td>"+ fullForm.explanation +
+                        "</td></tr><tr><th>Core Courses</th><td><ul>"
+                for(core in fullForm.mandatoryCourses){
+                    txtF+= "<li>" + fullForm.mandatoryCourses[core].course_name + "</li>"
+                }
+                txtF+= "</ul></td></tr><tr><th>Advance Courses</th><td><ul>";
+                for(advance in fullForm.advanceCourses){
+                        txtF +="<li>"+fullForm.advanceCourses[advance].course_name+"</li>";
+                }
+                txtF+= "</ul></td></tr><tr><th>Suggested Electives</th><td><ul>";
+                for(elective in fullForm.electiveCourses){
+                    txtF +="<li>"+fullForm.electiveCourses[elective].course_name+"</li>";
+
+                }
+                txtF += "</ul></td></tr>";
+                txtF+= "</ul></td></tr><tr><th>Internship</th><td>" + fullForm.internship +
+                        "</td></tr><tr><th>Profiling Space: Other courses</th><td>"+ fullForm.otherCourses +
+                        "</td></tr><tr><th>Other Courses: individual goals</th><td>"+ fullForm.otherCoursesExplanation +
+                        "</td></tr><tr><th>Total Credits</th><td>"+ parseInt(fullForm.ec);
+                txtF += "</td></tr></table>";
+                }
+                //ENDING OF THE TABLE
+                document.getElementById("form").innerHTML = txtF;
+
+        };
+        xmlhttp.open("GET",restServlet + "mentor/display/"+form_id ,true);
+        xmlhttp.send();
+        document.getElementById("btn_submit").setAttribute("name", form_id);
+        //document.getElementById("text").setAttribute("action","../studyplan/rest/mentor/form/"+form_id);
+        //document.getElementById("text").setAttribute("method", "PUT");
+    }
+
+    $('form').submit(function () {
+        $('input#state').val(formStatus);
+        return true
+    })
+
+    function validateComment(text){
+        alert(formStatus);
+        var  id = text.name;
+        var comment = document.forms["FComment"]["comment"].value;
+        var json = $('form').serialize();
+        json += "&state=" + formStatus;
+        console.log(json);
+        if (comment == "") {
+            alert("a comment must be filled out");1``
+            return false;
+        }
+
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.open("PUT", restServlet + "mentor/form/" + id,true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+        xmlhttp.send(json);
+        xmlhttp.onload = function () {
+            alert("This form with id: "+ id +" was successfully " + formStatus)
+        }
+    }
+
+</script>
+</body>
+
+
+</html>
